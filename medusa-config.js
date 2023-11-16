@@ -93,7 +93,7 @@ const projectConfig = {
   database_logging: [
     "query", "error",
   ],
-  database_schema: "custom",
+  database_schema: "public",
   database_type: "postgres",
   redis_url: process.env.REDIS_URL,
   redis_prefix: "medusa:",
