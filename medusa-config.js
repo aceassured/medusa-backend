@@ -109,17 +109,17 @@ const projectConfig = {
 /** @type {import('@medusajs/medusa').ConfigModule} */
 module.exports = {
   projectConfig,
-  // plugins,
-  plugins:[
-    `medusa-my-plugin-1`,
-    {
-      resolve: `medusa-my-plugin`,
-      options: {
-        apiKey: `test`, // or use env variables
-      },
-    },
-    // ...
-  ],
+  plugins,
+  // plugins:[
+  //   `medusa-my-plugin-1`,
+  //   {
+  //     resolve: `medusa-my-plugin`,
+  //     options: {
+  //       apiKey: `test`, // or use env variables
+  //     },
+  //   },
+  //   // ...
+  // ],
   modules: {
     cacheService: {
       resolve: "@medusajs/cache-redis",
