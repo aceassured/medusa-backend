@@ -4,7 +4,7 @@
 		npx medusa migrations run && npx medusa start
 
 		#Admin username & password
-                railway run npx medusa user --email bharath@aceassured.com --password aceassured
+                npx medusa user --email bharath@aceassured.com --password aceassured
 
                   
 		
