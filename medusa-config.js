@@ -124,14 +124,14 @@ module.exports = {
     cacheService: {
       resolve: "@medusajs/cache-redis",
       options: { 
-        redisUrl: process.env.REDIS_URL,
+        redisUrl: REDIS_URL,
         ttl: 30,
       },
     },
     eventBus: {
       resolve: "@medusajs/event-bus-redis",
       options: { 
-        redisUrl: process.env.REDIS_URL,
+        redisUrl: REDIS_URL,
       },
     },
     
