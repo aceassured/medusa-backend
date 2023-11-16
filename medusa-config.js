@@ -113,7 +113,7 @@ module.exports = {
     {
       resolve: `medusa-my-plugin`,
       options: {
-        apiKey: `test`, // or use env variables
+        apiKey: `something`, // or use env variables
       },
     },
     // ...
