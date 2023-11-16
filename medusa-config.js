@@ -46,6 +46,7 @@ const plugins = [
     resolve: "@medusajs/admin",
     /** @type {import('@medusajs/admin').PluginOptions} */
     options: {
+      path:"/app",
       autoRebuild: true,
       develop: {
         open: process.env.OPEN_BROWSER !== "false",
@@ -108,16 +109,17 @@ const projectConfig = {
 /** @type {import('@medusajs/medusa').ConfigModule} */
 module.exports = {
   projectConfig,
-  plugins:[
-    `medusa-my-plugin-1`,
-    {
-      resolve: `medusa-my-plugin`,
-      options: {
-        apiKey: `test`, // or use env variables
-      },
-    },
-    // ...
-  ],
+  plugins,
+  // plugins:[
+  //   `medusa-my-plugin-1`,
+  //   {
+  //     resolve: `medusa-my-plugin`,
+  //     options: {
+  //       apiKey: `test`, // or use env variables
+  //     },
+  //   },
+  //   // ...
+  // ],
   modules: {
     eventBus: {
       resolve: "@medusajs/event-bus-local",
