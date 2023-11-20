@@ -40,7 +40,7 @@ RUN rm -f .npmrc
 
 # RUN yarn run build
 
-RUN yarn run build
+RUN npm run build
 
 RUN yarn cache clean
 
