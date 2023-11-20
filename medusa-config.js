@@ -46,6 +46,7 @@ const plugins = [
     resolve: "@medusajs/admin",
     /** @type {import('@medusajs/admin').PluginOptions} */
     options: {
+      path:"/app",
       autoRebuild: true,
       develop: {
         open: process.env.OPEN_BROWSER !== "false",
@@ -77,7 +78,7 @@ const projectConfig = {
   database_url: DATABASE_URL,
   admin_cors: ADMIN_CORS,
   // Uncomment the following lines to enable REDIS
-  // redis_url: REDIS_URL
+  redis_url: REDIS_URL,
   http_compression: {
     enabled: true,
     level: 6,
@@ -92,7 +93,7 @@ const projectConfig = {
   database_logging: [
     "query", "error",
   ],
-  database_schema: "custom",
+  database_schema: "public",
   database_type: "postgres",
   redis_url: process.env.REDIS_URL,
   redis_prefix: "medusa:",
@@ -108,31 +109,37 @@ const projectConfig = {
 /** @type {import('@medusajs/medusa').ConfigModule} */
 module.exports = {
   projectConfig,
+  plugins,
   plugins:[
     `medusa-my-plugin-1`,
     {
       resolve: `medusa-my-plugin`,
       options: {
-        apiKey: `something`, // or use env variables
+        apiKey: `test`, // or use env variables
       },
     },
+    {
+      resolve: "@medusajs/admin",
+      /** @type {import('@medusajs/admin').PluginOptions} */
+      options: {
+        // ...
+      },
+    },
+  
     // ...
   ],
   modules: {
-    eventBus: {
-      resolve: "@medusajs/event-bus-local",
-    },
     cacheService: {
       resolve: "@medusajs/cache-redis",
       options: { 
-        redisUrl: process.env.CACHE_REDIS_URL,
+        redisUrl: REDIS_URL,
         ttl: 30,
       },
     },
     eventBus: {
       resolve: "@medusajs/event-bus-redis",
       options: { 
-        redisUrl: process.env.EVENTS_REDIS_URL,
+        redisUrl: REDIS_URL,
       },
     },
     
