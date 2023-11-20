@@ -40,7 +40,7 @@ RUN rm -f .npmrc
 
 # RUN yarn run build
 
-RUN medusa migrations run && medusa start
+RUN yarn run build
 
 RUN yarn cache clean
 
