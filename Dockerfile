@@ -40,7 +40,7 @@ RUN yarn --frozen-lock --ignore-engines
 
 RUN rm -f .npmrc
 
-RUN npm i
+RUN medusa develop
 
 
 RUN yarn cache clean
