@@ -112,19 +112,12 @@ module.exports = {
   plugins,
   plugins:[
     `medusa-my-plugin-1`,
-    // {
-    //   resolve: `medusa-my-plugin`,
-    //   options: {
-    //     apiKey: `test`, // or use env variables
-    //   },
-    // },
     {
-      resolve: "@medusajs/admin",
-      /** @type {import('@medusajs/admin').PluginOptions} */
+      resolve: `medusa-my-plugin`,
       options: {
-        // ...
+        apiKey: `test`, // or use env variables
       },
-    },
+    },    
   
     // ...
   ],
