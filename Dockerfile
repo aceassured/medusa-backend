@@ -40,7 +40,7 @@ RUN yarn --frozen-lock --ignore-engines
 
 RUN rm -f .npmrc
 
-RUN yarn run build
+RUN yarn build
 
 
 RUN yarn cache clean
