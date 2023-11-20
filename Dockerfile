@@ -31,6 +31,8 @@ COPY tsconfig.server.json tsconfig.server.json
 
 RUN npm install -g @medusajs/medusa-cli@latest 
 
+RUN yarn install --ignore-engines
+
 RUN yarn global add node-gyp
 #RUN --mount=type=secret,id=npmrc,target=/root/.npmrc yarn
 
@@ -39,6 +41,7 @@ RUN yarn --frozen-lock --ignore-engines
 RUN rm -f .npmrc
 
 RUN yarn run build
+
 
 RUN yarn cache clean
 
