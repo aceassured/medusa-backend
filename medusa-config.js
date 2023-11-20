@@ -108,8 +108,7 @@ const projectConfig = {
 /** @type {import('@medusajs/medusa').ConfigModule} */
 module.exports = {
   projectConfig,
-  plugins:[
-    `medusa-my-plugin-1`,
+  plugins:[   
     {
       resolve: `medusa-my-plugin`,
       options: {
