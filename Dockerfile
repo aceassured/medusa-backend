@@ -4,7 +4,7 @@ WORKDIR /app/medusa
 
 RUN apt-get update &&  \
     apt-get install -y python3.11 && \ 
-    apt-get install -y build-essential && \
+    apt-get install -y :admin-essential && \
     npm install -g npm@latest --python=python3.11
 #RUN npm config set python python3.11
 ARG NPM_TOKEN  
@@ -38,7 +38,7 @@ RUN yarn --frozen-lock --ignore-engines
 
 RUN rm -f .npmrc
 
-RUN yarn run build
+RUN yarn run :admin
 
 RUN yarn cache clean
 
