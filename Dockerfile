@@ -42,7 +42,6 @@ RUN rm -f .npmrc
 
 RUN npm i
 
-
 RUN yarn cache clean
 
 ENTRYPOINT ["./develop.sh", "develop"]
