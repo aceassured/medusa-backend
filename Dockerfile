@@ -36,7 +36,7 @@ RUN npm install -g @medusajs/medusa-cli@latest
 RUN yarn global add node-gyp
 #RUN --mount=type=secret,id=npmrc,target=/root/.npmrc yarn
 
-RUN yarn --frozen-lock --ignore-engines
+RUN yarn --ignore-engines
 
 RUN rm -f .npmrc
 
