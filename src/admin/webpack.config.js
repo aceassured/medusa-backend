@@ -1,4 +1,4 @@
-const  withCustomWebpackConfig = require("@medusajs/admin-ui/dist").withCustomWebpackConfig
+const  withCustomWebpackConfig = require("@medusajs/admin-ui").withCustomWebpackConfig
 
 module.exports =  withCustomWebpackConfig((config, webpack) => {
   config.plugins.push(
