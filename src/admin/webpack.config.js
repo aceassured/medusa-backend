@@ -1,6 +1,6 @@
-import { withCustomWebpackConfig } from "@medusajs/admin"
+const  withCustomWebpackConfig = require("@medusajs/admin")
 
-export default withCustomWebpackConfig((config, webpack) => {
+module.exports =  withCustomWebpackConfig((config, webpack) => {
   config.plugins.push(
     new webpack.DefinePlugin({
     "process.env": {
