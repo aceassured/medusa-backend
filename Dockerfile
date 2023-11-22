@@ -40,7 +40,7 @@ RUN yarn --ignore-engines
 
 RUN rm -f .npmrc
 
-RUN npm i 
+#RUN npm i 
 
 RUN yarn cache clean
 
