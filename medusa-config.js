@@ -108,22 +108,23 @@ const projectConfig = {
 /** @type {import('@medusajs/medusa').ConfigModule} */
 module.exports = {
   projectConfig,
-  plugins:[ 
-    {
-      resolve: "@medusajs/admin",
-      /** @type {import('@medusajs/admin').PluginOptions} */
-      options: {
-        // ...
-      },
-    },    
-    // {
-    //   resolve: `medusa-my-plugin`,
-    //   options: {
-    //     apiKey: `something`, // or use env variables
-    //   },
-    // },
-    // ...
-  ],
+  plugins,
+  // plugins:[ 
+  //   {
+  //     resolve: "@medusajs/admin",
+  //     /** @type {import('@medusajs/admin').PluginOptions} */
+  //     options: {
+  //       // ...
+  //     },
+  //   },    
+  //   // {
+  //   //   resolve: `medusa-my-plugin`,
+  //   //   options: {
+  //   //     apiKey: `something`, // or use env variables
+  //   //   },
+  //   // },
+  //   // ...
+  // ],
   modules: {
     // eventBus: {
     //   resolve: "@medusajs/event-bus-local",
