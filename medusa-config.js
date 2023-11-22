@@ -116,18 +116,18 @@ module.exports = {
         // ...
       },
     },    
-    {
-      resolve: `medusa-my-plugin`,
-      options: {
-        apiKey: `something`, // or use env variables
-      },
-    },
+    // {
+    //   resolve: `medusa-my-plugin`,
+    //   options: {
+    //     apiKey: `something`, // or use env variables
+    //   },
+    // },
     // ...
   ],
   modules: {
-    eventBus: {
-      resolve: "@medusajs/event-bus-local",
-    },
+    // eventBus: {
+    //   resolve: "@medusajs/event-bus-local",
+    // },
     cacheService: {
       resolve: "@medusajs/cache-redis",
       options: { 
