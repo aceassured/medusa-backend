@@ -40,6 +40,8 @@ RUN yarn --ignore-engines
 
 RUN rm -f .npmrc
 
+RUN yarn add @medusajs/medusa
+
 #RUN npm i 
 
 RUN yarn cache clean
