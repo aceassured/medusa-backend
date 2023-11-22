@@ -146,7 +146,7 @@ module.exports = {
     // ...
   },
   featureFlags: {
-    product_categories: true, 
+    product_categories: true,   
     // ...
   },
 };
