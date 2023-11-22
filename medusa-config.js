@@ -77,7 +77,7 @@ const projectConfig = {
   database_url: DATABASE_URL,
   admin_cors: ADMIN_CORS,
   // Uncomment the following lines to enable REDIS
-  // redis_url: REDIS_URL
+  redis_url: REDIS_URL,
   http_compression: {
     enabled: true,
     level: 6,
@@ -131,14 +131,14 @@ module.exports = {
     cacheService: {
       resolve: "@medusajs/cache-redis",
       options: { 
-        redisUrl: process.env.CACHE_REDIS_URL,
+        redisUrl: process.env.REDIS_URL,
         ttl: 30,
       },
     },
     eventBus: {
       resolve: "@medusajs/event-bus-redis",
       options: { 
-        redisUrl: process.env.EVENTS_REDIS_URL,
+        redisUrl: process.env.REDIS_URL,
       },
     },
     
