@@ -6,7 +6,7 @@ export default withCustomWebpackConfig((config, webpack) => {
     "process.env": {
       NODE_ENV: JSON.stringify("production"),
       API_URL: 
-        JSON.stringify("https://api.medusa-commerce.com"),
+        JSON.stringify("https://medusa-backend-production-3774.up.railway.app"),
     },
     })
   )
